@@ -1,12 +1,12 @@
 .statBlock{
 
-    width:50%;
+    /*width:50%;*/
     heigth:500px;
     padding: 15px;
     text-align: center;
     background:#343a40!important;
     color:white;
-    border-radius: 10px;
+    border-radius: 100px;
     display: block;
     margin: auto;
     margin-top: 5%;
@@ -14,4 +14,12 @@
 
 .stats{
     display: block;
+}
+
+.mini-block{
+    height: 15rem;
+    width: 20rem;
+    background: white;
+    padding: 20px;
+    border-radius: 35px;
 }

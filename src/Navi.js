@@ -5,7 +5,7 @@ export default class Navi extends Component {
   render() {
     return (
       <>
-        <Navbar className="h-80" bg="dark" variant="dark">
+        <Navbar className="h-80 nav-bg" bg="dark" variant="dark">
           <Navbar.Brand> <Link to={"/"}> Covid 19</Link> </Navbar.Brand>
           <Nav className="mr-auto">
             <Nav.Link> <Link className="gray-link" to={"/news"}> News</Link> </Nav.Link>
@@ -14,7 +14,7 @@ export default class Navi extends Component {
           </Nav>
           <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-info">Search</Button>
+            <Button variant="dark">Search</Button>
           </Form>
         </Navbar>
       </>

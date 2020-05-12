@@ -11,6 +11,7 @@ import Tables from "./Tables";
 import NotFound from "./NotFound";
 
 import { Route, Switch } from "react-router-dom";
+import Slide from "./Slide";
 
 const API = "https://hn.algolia.com/api/v1/search?query=";
 const DEFAULT_QUERY = "redux";
@@ -20,7 +21,6 @@ export default class App extends Component {
     users: [],
     countries: [],
     summary: [],
-    stats: [],
     tr: [],
     allCountries: []
   };
@@ -34,11 +34,11 @@ export default class App extends Component {
   componentDidMount() {
     this.getCountries();
     this.getSummary();
-    this.getStats();
     this.getTurkey();
     this.getAllCountries();
 
   }
+  
   getAllCountries = () => {
     fetch(
       "https://api.apify.com/v2/key-value-stores/tVaYRsPHLjNdNBu7S/records/LATEST?disableRedirect=true"
@@ -66,13 +66,8 @@ export default class App extends Component {
       .then((data) => this.setState({ countries: data }));
   };
 
-  getStats = () => {
-    fetch("https://api.covid19api.com/stats")
-      .then((response) => response.json())
-      .then((data) => this.setState({ stats: data }));
-  };
-
   render() {
+
     return (
       <div>
         <Navi />
