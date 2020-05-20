@@ -11,7 +11,7 @@ export default class Tables extends Component {
           <Col xs="12">
             <h4 className="text-center theme-color"><strong>All World</strong></h4>
             <br></br>
-            <Table className="table-shadow">
+            <Table className="table-shadow m-auto" style={{ width: "85%" }}>
               <thead>
                 <tr>
                   <th>Country</th>

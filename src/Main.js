@@ -26,11 +26,11 @@ export default class Main extends Component {
                     size={30}
                     color="#343a40"
                   ></BsFillHeartFill>{" "}
-                  Total Confirmed :
+                  Total Confirmed : 
                 </strong>{" "}
                 <br></br>
                 <br></br>
-                <strong className="fs-2r">4.215.514 </strong>
+                <strong className="fs-2r"> 5,100,000 </strong>
                 <br></br> <strong>People</strong> <br></br>
                 <BsBarChartFill className="pull-right" size={50} />
               </p>

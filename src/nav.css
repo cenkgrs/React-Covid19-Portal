@@ -1,0 +1,19 @@
+.nav-bg{
+    height: 70px;
+
+}
+.navbar-header{
+    font-weight: bold;
+    line-height: 1rem;
+    padding-right: 20px;
+    font-size: 1.3rem;
+    margin-right: 10px;
+    padding: 1rem 3rem 1rem 1rem;
+
+}
+
+.navigation-link{
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}

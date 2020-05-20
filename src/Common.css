@@ -35,6 +35,11 @@ a {
 
 .mt-10r{margin-top: 10rem;}
 
+.pt-3{padding-top:3px;}
 
 .pull-right{float: right;}
 .fs-2r{font-size:2rem}
+
+.carousel-caption h3{
+  color: white; font-weight: bold;
+}

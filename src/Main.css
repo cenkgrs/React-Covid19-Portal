@@ -1,7 +1,7 @@
 .statBlock{
 
     /*width:50%;*/
-    heigth:500px;
+    height:500px;
     padding: 15px;
     text-align: center;
     background:#343a40!important;
@@ -23,3 +23,7 @@
     padding: 20px;
     border-radius: 35px;
 }
+
+
+.carousel-control-prev{ left: 16% !important;}
+.carousel-control-next{ right: 16% !important;}
