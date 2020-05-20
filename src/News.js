@@ -296,7 +296,11 @@ export default class News extends Component {
         );
       }
     } else {
-      return <div className="container-fluid"></div>;
+      return (
+      <div className="news-container">
+
+      </div>
+      );
     }
   }
 }

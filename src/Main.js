@@ -12,6 +12,7 @@ export default class Main extends Component {
   render() {
     return (
       <div>
+        <Slide/>
 
 
         <h3 className="ml-5r stats-header"> World Wide Stats </h3>

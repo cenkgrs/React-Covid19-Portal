@@ -91,3 +91,21 @@
     font-size: 1.4rem;
     margin: 3rem 0 2rem 0;
 }
+.protect-container{
+    padding: 20px;
+    background: white;
+    height: max-content;
+    padding-top: 0;
+}
+.protect-header{
+    color: #444444;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+.protect-mini-header{
+    text-align: left;
+    font-size: 1.4rem;
+    margin: 3rem 0 2rem 0;
+}
+
