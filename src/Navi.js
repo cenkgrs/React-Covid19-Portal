@@ -16,6 +16,7 @@ export default class Navi extends Component {
             <Link className="navigation-link" to={"/news"}> News</Link> 
             <Link className="navigation-link" to={"/charts"}> Charts</Link>
             <Link className="navigation-link" to={"/tables"}> All World</Link>
+            <Link className="navigation-link" to={"/about"}> About Coronavirus</Link>
           </Nav>
           <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />

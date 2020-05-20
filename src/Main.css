@@ -24,6 +24,20 @@
     border-radius: 35px;
 }
 
+.stats-header{
+    padding: 15px;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.stats-container{
+
+    padding: 20px;
+    margin: auto;
+    margin: 20px;
+}
 
 .carousel-control-prev{ left: 16% !important;}
 .carousel-control-next{ right: 16% !important;}

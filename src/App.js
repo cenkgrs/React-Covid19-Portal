@@ -7,6 +7,8 @@ import Navi from "./Navi";
 import News from "./News";
 import Main from "./Main";
 import Tables from "./Tables";
+import About from "./About";
+
 
 import NotFound from "./NotFound";
 
@@ -161,6 +163,7 @@ export default class App extends Component {
               />
             )}
           ></Route>
+          <Route component={About}></Route>
           <Route component={NotFound}></Route>
         </Switch>
       </div>

@@ -12,11 +12,12 @@ export default class Main extends Component {
   render() {
     return (
       <div>
-        <Slide />
 
 
-        <h3 className="ml-5r"> World Wide </h3>
-        <Row className="m-auto">
+        <h3 className="ml-5r stats-header"> World Wide Stats </h3>
+
+        <div class="stats-container">
+            <Row className="m-auto">
           <Col xs="12" lg="3">
             <div className="mini-block">
               <p>
@@ -94,9 +95,9 @@ export default class Main extends Component {
             </div>
           </Col>
         </Row>
+              <br></br>
 
-        <br></br>
-        <Row>
+            <Row>
           <Col xs="12" lg="3">
             <div className="mini-block">
               <p>
@@ -156,6 +157,10 @@ export default class Main extends Component {
             </div>
           </Col>
         </Row>
+        </div>
+       
+
+        
 
         <Col xs="12" lg="4"></Col>
 
