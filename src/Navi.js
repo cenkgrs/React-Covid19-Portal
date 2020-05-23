@@ -13,7 +13,7 @@ export default class Navi extends Component {
           <GiHealthNormal className="pull-right" style={{color:"#0072ff7d"}} size={30} />
            <Link className="navbar-header" to={"/"}> Covid 19</Link> 
           <Nav className="mr-auto">
-            <Link className="navigation-link" to={"/news"}> News</Link> 
+            <Link className="navigation-link" to={"/news-panel"}> News</Link> 
             <Link className="navigation-link" to={"/charts"}> Charts</Link>
             <Link className="navigation-link" to={"/tables"}> All World</Link>
             <Link className="navigation-link" to={"/about"}> About Coronavirus</Link>

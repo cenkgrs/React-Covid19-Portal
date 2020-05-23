@@ -4,7 +4,7 @@ import { Table, Button, Row, Col } from "react-bootstrap";
 export default class Tables extends Component {
   render() {
     return (
-      <div className="container-fluid">
+      <div className="tables-container">
         <br></br>
 
         <Row>
@@ -30,27 +30,6 @@ export default class Tables extends Component {
                     <td> {country.deceased}</td>
                     <td> {country.tested}</td>
 
-                  </tr>
-                ))}
-              </tbody>
-            </Table>
-          </Col>
-          <Col xs="6">
-            <h4>Countries</h4>
-            <Table>
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Country</th>
-                  <th>Slug</th>
-                </tr>
-              </thead>
-              <tbody>
-                {this.props.countries.map((news) => (
-                  <tr key={news.id}>
-                    <td> {news.Id}</td>
-                    <td> {news.Country} </td>
-                    <td> {news.Slug}</td>
                   </tr>
                 ))}
               </tbody>

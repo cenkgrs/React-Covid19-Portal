@@ -48,3 +48,29 @@ a {
 .carousel-caption h3{
   color: white; font-weight: bold;
 }
+
+.table td{padding: 1rem !important;}
+.table th{padding: 1rem !important;}
+
+.tables-container{
+  padding: 15px;
+  background: white;
+  margin-bottom: 5rem;
+}
+
+.scroll-div{
+  height: 10vh;
+  width: 10vh;
+  padding: 10px;
+  margin: auto;
+  position: fixed;
+  bottom: 2%;
+  right: 1%;
+  text-align: center;
+  line-height: 7vh;
+  border-radius: 6rem;
+  background: #343a40;
+  display: none;
+}
+
+.slide-container{ padding: 20px; margin: 20px }

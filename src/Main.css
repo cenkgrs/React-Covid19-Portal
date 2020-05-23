@@ -1,15 +1,16 @@
 .statBlock{
 
-    /*width:50%;*/
-    height:500px;
-    padding: 15px;
+    width: fit-content;
+    /* height: 500px; */
+    padding: 24px;
     text-align: center;
-    background:#343a40!important;
-    color:white;
-    border-radius: 100px;
+    background: #343a40!important;
+    color: white;
+    border-radius: 1rem;
     display: block;
     margin: auto;
     margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .stats{

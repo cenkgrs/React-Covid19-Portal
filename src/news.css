@@ -1,3 +1,4 @@
+/* NEWS PAGE */
 .news-container{
     width: 80%;
     height: max-content;
@@ -59,3 +60,62 @@
 }
 
 .news-body{ margin: 3rem 0;}
+
+
+/* NEWS PANEL */
+
+.news-panel{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 5rem;
+}
+.news-panel-header{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    color: #444444;
+}
+.news-panel-body{
+    margin-top: 5rem;
+}
+.news-card{
+    width: fit-content;
+    height: 100%;
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    height: 65vh;
+    box-shadow: 0px 0px 13px 2px black;
+    border-radius: 0.7rem 0.7rem 0.7rem 0.7rem;
+    background: white;
+
+}
+.news-briefing {
+    color: #ffffff;
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    margin: 0 auto; width: 100%;
+    border-radius: 0 0 2rem 2rem;
+    background: #ffffff;
+    padding: 2rem;
+}
+.news-briefing h3{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: black;
+}
+.news-briefing span{
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #444444;
+}
+.news-panel-image{
+    width: 100%;
+    height: 40vh;
+    border-radius: 0.7rem 0.7rem 0 0
+}

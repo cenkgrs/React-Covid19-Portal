@@ -8,6 +8,9 @@ import News from "./News";
 import Main from "./Main";
 import Tables from "./Tables";
 import About from "./About";
+import Charts from "./Charts";
+import NewsItem from "./NewsItem";
+
 
 
 import NotFound from "./NotFound";
@@ -20,9 +23,7 @@ const DEFAULT_QUERY = "redux";
 
 export default class App extends Component {
   state = {
-    users: [],
     countries: [],
-    summary: [],
     tr: [],
     allCountries: [],
     totalData: []
@@ -80,7 +81,6 @@ export default class App extends Component {
       
 
     this.getCountries();
-    this.getSummary();
     this.getTurkey();
     //this.getAllCountries();
 
@@ -123,11 +123,7 @@ export default class App extends Component {
       .then((data) => this.setState({ tr: data }));
   };
 
-  getSummary = () => {
-    fetch("https://api.covid19api.com/summary")
-      .then((response) => response.json())
-      .then((data) => this.setState({ summary: data }));
-  };
+
 
   getCountries = () => {
     fetch("https://api.covid19api.com/countries")
@@ -149,7 +145,10 @@ export default class App extends Component {
               <Main {...props} tr={this.state.tr} stats={this.state.totalData} />
             )}
           ></Route>
-          <Route exact path="/news" component={News}></Route>
+          <Route exact path="/charts" component={Charts}></Route>
+          <Route exact path="/news-panel" component={News}></Route>
+          <Route exact path="/news" component={NewsItem}></Route>
+
 
           <Route
             exact
@@ -158,12 +157,10 @@ export default class App extends Component {
               <Tables
                 {...props}
                 allCountries = {this.state.allCountries}
-                countries={this.state.countries}
-                summary={this.state.summary}
               />
             )}
           ></Route>
-          <Route component={About}></Route>
+          <Route exact path="/about" component={About}></Route>
           <Route component={NotFound}></Route>
         </Switch>
       </div>

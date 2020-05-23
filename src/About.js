@@ -1,7 +1,47 @@
 import React, { Component } from "react";
 import "./about.css";
-
+import $ from "jquery";
+import { FaCaretUp } from "react-icons/fa";
 export default class About extends Component {
+
+
+  componentDidMount() {
+
+    // Runs when info card clickded -> scroll to that div
+    $(".info-card").on("click", function () {
+      let type = $(this).data("type");
+
+      goToByScroll(type);
+    });
+
+    // If scroll div clicked scroll to top of the page
+    $(".scroll-div").on("click", function () {
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+    });
+
+    // Scroll function
+    function goToByScroll(type) {
+      
+      let container = type + "-container";
+      // Scroll
+      $("html,body").animate(
+        {
+          scrollTop: $("." + container).offset().top,
+        },
+        "slow"
+      );
+    }
+    
+    // Runs when page scroll down and scroll-div appears
+    window.addEventListener("scroll",function(){
+      if(document.documentElement.scrollTop == 0){
+        $(".scroll-div").fadeOut()
+      }else{
+          $(".scroll-div").fadeIn()
+      }
+    })
+  }
+
   render() {
     return (
       <div className="about-container">
@@ -20,36 +60,49 @@ export default class About extends Component {
           no vaccines or antiviral drugs to prevent or treat human coronavirus
           infections. Coronaviruses constitute the subfamily{" "}
           <strong>Orthocoronavirinae</strong>, in the family Coronaviridae,
-          order Nidovirales, and realm Riboviria.[5][6] They are enveloped
-          viruses with a positive-sense single-stranded RNA genome and a
-          nucleocapsid of helical symmetry.[7] This is wrapped in a icosahedral
-          protein shell.[8] The genome size of coronaviruses ranges from
-          approximately 26 to 32 kilobases, one of the largest among RNA
-          viruses.[9] They have characteristic club-shaped spikes that project
-          from their surface, which in electron micrographs create an image
-          reminiscent of the solar corona, from which their name derives.[10]
+          order Nidovirales, and realm Riboviria. They are enveloped viruses
+          with a positive-sense single-stranded RNA genome and a nucleocapsid of
+          helical symmetry. This is wrapped in a icosahedral protein shell. The
+          genome size of coronaviruses ranges from approximately 26 to 32
+          kilobases, one of the largest among RNA viruses. They have
+          characteristic club-shaped spikes that project from their surface,
+          which in electron micrographs create an image reminiscent of the solar
+          corona, from which their name derives.
         </div>
 
         <div className="about-body">
           <div className="row">
             <div className="col-lg-3">
-              <div className="info-card">Symptoms</div>
+              <div className="info-card" data-type="symptoms">
+                Symptoms
+              </div>
             </div>
             <div className="col-lg-3">
-              <div className="info-card">Testing</div>
+              <div className="info-card" data-type="testing">
+                Testing
+              </div>
             </div>
             <div className="col-lg-3">
-              <div className="info-card">If you are sick</div>
+              <div className="info-card" data-type="sick">
+                If you are sick
+              </div>
             </div>
             <div className="col-lg-3">
-              <div className="info-card">How to Protect Yourself</div>
+              <div className="info-card" data-type="protect">
+                How to Protect Yourself
+              </div>
             </div>
           </div>
         </div>
 
+        <div className="scroll-div">
+            {" "}
+            <FaCaretUp size={40} color="white"></FaCaretUp>{" "}
+        </div>
+
         <div className="symptoms-container mt-5r">
           <div className="symptoms-header">Symptoms of Coronavirus</div>
-          <div class="symptoms-mini-header">What you need to know</div>
+          <div className="symptoms-mini-header">What you need to know</div>
           <div className="symptoms-body">
             <ul>
               <li>Anyone can have mild to severe symptoms.</li>
@@ -60,7 +113,7 @@ export default class About extends Component {
                 COVID-19 illness
               </li>
             </ul>
-            <div class="symptoms-mini-header">Watch for symptoms</div>
+            <div className="symptoms-mini-header">Watch for symptoms</div>
             People with COVID-19 have had a wide range of symptoms reported –
             ranging from mild symptoms to severe illness. Symptoms may appear
             2-14 days after exposure to the virus. People with these symptoms
@@ -480,10 +533,23 @@ export default class About extends Component {
           <div className="protect-mini-header">Cover coughs and sneezes</div>
 
           <ul>
-              <li><strong>If you are in a private setting and do not have on your cloth face covering, remember to always cover your mouth and nose</strong> with a tissue when you cough or sneeze or use the inside of your elbow.</li>
-              <li><strong>Throw used tissues</strong> in the trash.</li>
-              <li>Immediately <strong>wash your hands</strong> with soap and water for at least 20 seconds. If soap and water are not readily available, clean your hands with a hand sanitizer that contains at least 60% alcohol.</li>
-
+            <li>
+              <strong>
+                If you are in a private setting and do not have on your cloth
+                face covering, remember to always cover your mouth and nose
+              </strong>{" "}
+              with a tissue when you cough or sneeze or use the inside of your
+              elbow.
+            </li>
+            <li>
+              <strong>Throw used tissues</strong> in the trash.
+            </li>
+            <li>
+              Immediately <strong>wash your hands</strong> with soap and water
+              for at least 20 seconds. If soap and water are not readily
+              available, clean your hands with a hand sanitizer that contains at
+              least 60% alcohol.
+            </li>
           </ul>
         </div>
       </div>
