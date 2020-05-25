@@ -7,23 +7,19 @@ import Navi from "./Navi";
 import News from "./News";
 import Main from "./Main";
 import Tables from "./Tables";
+import Slide from "./Slide";
 import About from "./About";
 import Charts from "./Charts";
 import NewsItem from "./NewsItem";
-
-
-
 import NotFound from "./NotFound";
 
 import { Route, Switch } from "react-router-dom";
-import Slide from "./Slide";
 
 const API = "https://hn.algolia.com/api/v1/search?query=";
 const DEFAULT_QUERY = "redux";
 
 export default class App extends Component {
   state = {
-    countries: [],
     tr: [],
     allCountries: [],
     totalData: []
@@ -61,28 +57,8 @@ export default class App extends Component {
         this.getAllCountries();
     }
 
-    if(localStorage.getItem('totalData')){
-
-      this.setState({ totalData : localStorage.getItem('totalData') }) 
-      // setting cachedColors to null if it wasn't stored today
-      if( new Date().getDay().toString() != oldDate ) {
-        console.log("date didnt matched ")
-        isNewDay = true;
-      }
-
-       // if cachedColors still got value, it means we can use it as valid cache for today
-      if(!isNewDay){
-
-      }
-
-    }else{
-        //this.getTotalData();
-    }
       
-
-    this.getCountries();
     this.getTurkey();
-    //this.getAllCountries();
 
   }
   
@@ -123,13 +99,6 @@ export default class App extends Component {
       .then((data) => this.setState({ tr: data }));
   };
 
-
-
-  getCountries = () => {
-    fetch("https://api.covid19api.com/countries")
-      .then((response) => response.json())
-      .then((data) => this.setState({ countries: data }));
-  };
 
   render() {
 
